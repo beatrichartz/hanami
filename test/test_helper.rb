@@ -1,8 +1,7 @@
 require_relative './support/helper'
 
-if ENV['COVERALL']
-  require 'coveralls'
-  Coveralls.wear!
+if defined?(SimpleCov)
+  SimpleCov.command_name 'Unit Tests'
 end
 
 # Skip MRI specifc specs
